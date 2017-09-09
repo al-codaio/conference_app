@@ -1,0 +1,326 @@
+{
+  "contract_name": "Conference",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "registrantsPaid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "organizer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "refundTicket",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "destroy",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newquota",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeQuota",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "quota",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "numRegistrants",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "buyTicket",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Refund",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60008054600160a060020a03191633600160a060020a03161781556101f46003556002555b5b6103d8806100456000396000f3006060604052361561008b5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166313381fbf811461009057806361203265146100c1578063705099b9146100f057806383197ef01461011b578063a977c71e14610130578063cebe09c914610148578063ec3a6f731461016d578063edca914c14610192575b600080fd5b341561009b57600080fd5b6100af600160a060020a03600435166101ae565b60405190815260200160405180910390f35b34156100cc57600080fd5b6100d46101c0565b604051600160a060020a03909116815260200160405180910390f35b610107600160a060020a03600435166024356101cf565b604051901515815260200160405180910390f35b341561012657600080fd5b61012e6102c8565b005b341561013b57600080fd5b61012e6004356102f0565b005b341561015357600080fd5b6100af610314565b60405190815260200160405180910390f35b341561017857600080fd5b6100af61031a565b60405190815260200160405180910390f35b610107610320565b604051901515815260200160405180910390f35b60016020526000908152604090205481565b600054600160a060020a031681565b60008054819033600160a060020a039081169116146101ed576102bf565b600160a060020a0384166000908152600160205260409020548314156102bf575030600160a060020a038116318390106102bf57600160a060020a03841683156108fc0284604051600060405180830381858888f19350505050151561025257600080fd5b600160a060020a03841660009081526001602052604080822091909155600280546000190190557fbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d908590859051600160a060020a03909216825260208201526040908101905180910390a15b5b5b5092915050565b60005433600160a060020a03908116911614156102ed57600054600160a060020a0316ff5b5b565b60005433600160a060020a0390811691161461030b57610311565b60038190555b50565b60035481565b60025481565b6000600354600254101515610337575060006103a9565b33600160a060020a0381166000908152600160208190526040918290203490819055600280549092019091557fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c929151600160a060020a03909216825260208201526040908101905180910390a15060015b905600a165627a7a723058205af081684f0d9be56ae83ce6ff8997c0466e936a47a3613b80eef798b008781d0029",
+  "networks": {
+    "1504899012890": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0xbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Refund",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9fbe65ed640bda2d4b207dda7d47297fee8c96c3",
+      "updated_at": 1504901712504
+    },
+    "1504932557081": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0xbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Refund",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x2d766ef4770d17054989cf666e32c609c48d1e9c",
+      "updated_at": 1504932701477
+    },
+    "1504969599975": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0xbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Refund",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xd5ccf7f90ccd01a6f6dcd76d288cfe5ac2296db7",
+      "updated_at": 1504969665436
+    },
+    "1504970318327": {
+      "events": {
+        "0xe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_from",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Deposit",
+          "type": "event"
+        },
+        "0xbb28353e4598c3b9199101a66e0989549b659a59a54d2c27fbb183f1932c8e6d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Refund",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xc2b08dcb23a5eed30784028f5f3f3090af70de21",
+      "updated_at": 1504970707815
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1504970707815
+}
