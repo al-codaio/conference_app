@@ -29,10 +29,10 @@
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.2",
-    "truffle-contract": "^1.1.11",
+    "truffle-contract": "^3.0.0",
     "web3": "^0.18.4",
     "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "^2.8.1"
   },
   "dependencies": {
     "solc": "^0.4.16"
